@@ -55,9 +55,15 @@
    background-color: black;
    position: relative;
    width: 100vw;
-   height: 90vh;
+   height: 100vh;
    overflow: hidden;
    animation: zoomFullScreen .5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media (max-width: 768px) {
+   .camera-container {
+      height: 90vh;
+   }
 }
 
 #capture-btn {
