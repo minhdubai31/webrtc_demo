@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WebRTC Demo</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="hide-on-capture container">
+			<canvas id="canvas" class="camera-view" hidden></canvas>
+			<h3>Demo WebRTC</h3>
+			<button class="start-camera-btn" onclick="return startCamera()">Start camera</button>
+			<div class="photo-preview-container">
+				<h3>Preview</h3>
+				<img id="photo" alt="This is taken photo">
+				<div>
+					<button id="download">Download Photo</button>
+				</div>
+			</div>
+		</div>
+		<!-- Select camera -->
+		<div id="camera-container" class="camera-container">
+			<div class="camera-view">
+				<video id="camera-view" autoplay playsinline></video>
+				<div id="photo-info" class="photo-info" hidden></div>
+			</div>
+			<button id="capture-btn" onclick="return takePhoto(event); (event)"></button>
+			<button id="stop-camera-btn" class="camera-control-btn" onclick="return stopCamera()">Close</button>
+			<button id="switch-camera-btn" class="camera-control-btn" onclick="return switchCamera()">Switch camera</button>
+		</div>
+	</body>
+</html>
